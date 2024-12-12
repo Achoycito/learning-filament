@@ -13,8 +13,10 @@ class FolderController extends Controller
      */
     public function index()
     {
-        $folders = Folder::with('children.children')->get();
+        $folders = Folder::where('parent_id', null)->with('children.children.children.children')->get();
 
+        
+        // return $folders;
         return view('map', compact('folders'));
     }
 
