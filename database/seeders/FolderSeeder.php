@@ -16,12 +16,18 @@ class FolderSeeder extends Seeder
         //
         DB::table('folders')->insert([
             'name' => 'Gestion',
+            'category_id' => 1
         ]);
         DB::table('folders')->insert([
-            'name' => 'Universidad',
+            'name' => 'Recursos Financieros',
+            'category_id' => 2,
+            'parent_id' => 1
         ]);
         DB::table('folders')->insert([
-            'name' => 'Normatividad',
+            'name' => 'Ley Disciplina Financiera',
+            'category_id' => 3,
+            'parent_id' =>2
         ]);
+        
     }
 }

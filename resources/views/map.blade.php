@@ -13,9 +13,9 @@
             <div class="rounded-lg p-4 flex flex-col gap-3 border border-neutral-200 shadow-lg">
                 <a class="text-lg font-semibold">{{$folder->name}}</a>
                 <ul class="flex flex-row flex-wrap gap-x-4 gap-y-3 bg-neutral-100 rounded-lg p-4 border border-neutral-200">
-                    @foreach ($folder->documents as $doc)
+                    @foreach ($folder->children as $child)
                         <li>
-                            <a href="#" class="px-2 py-1 bg-sky-200">{{$doc->name}}</a>
+                            <a href="#" class="px-2 py-1 bg-sky-200">{{$child->name}}</a>
                         </li>
                     @endforeach
                 </ul>

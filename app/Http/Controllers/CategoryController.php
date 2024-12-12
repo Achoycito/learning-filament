@@ -2,20 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Folder;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-
-class FolderController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $folders = Folder::with('children.children')->get();
-
-        return view('map', compact('folders'));
+        //
     }
 
     /**
@@ -37,7 +34,7 @@ class FolderController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Folder $folder)
+    public function show(Category $category)
     {
         //
     }
@@ -45,7 +42,7 @@ class FolderController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Folder $folder)
+    public function edit(Category $category)
     {
         //
     }
@@ -53,7 +50,7 @@ class FolderController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Folder $folder)
+    public function update(Request $request, Category $category)
     {
         //
     }
@@ -61,7 +58,7 @@ class FolderController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Folder $folder)
+    public function destroy(Category $category)
     {
         //
     }
